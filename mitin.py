@@ -1,6 +1,6 @@
 import streamlit as st
-st.header('# Welcome to MITin ')
-st.subheader('Your talent finding platform')
+st.title('# Welcome to MITin ')
+st.write('Your talent finding platform')
 st.write('# Choose your type of access')
 st.button('Login as recruiter')
 st.button('Login as student')
