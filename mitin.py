@@ -1,6 +1,6 @@
 import streamlit as st
 st.title(' Welcome to :rainbow[MITin] ')
-st.write(':cyan[Your talent finding platform]')
+st.write(':indigo[Your talent finding platform]')
 st.write('# Choose your type of access')
 st.button('Login as :blue[recruiter]')
 st.button('Login as :green[student]')
