@@ -1,4 +1,14 @@
 import streamlit as st
+st.markdown("""
+<style>
+.stApp {
+    background-image: url("https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_REPO/main/background.png");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+</style>
+""", unsafe_allow_html=True)
 
 st.title(' Welcome to :rainbow[MITin] ')
 st.write(':blue[Your talent finding platform]')
@@ -25,4 +35,4 @@ st.markdown(
 Recruiters can use multiple filters such as branch, CGPA, skills, programming languages, project type, and project level to quickly find students matching their requirements. Students can build and maintain their profiles throughout college, creating a digital portfolio that represents their growth and capabilities.
 """
 )
-st.background('mitin.png')
+
