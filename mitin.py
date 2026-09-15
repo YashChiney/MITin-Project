@@ -2,7 +2,7 @@ import streamlit as st
 st.markdown("""
 <style>
 .stApp {
-    background-image: url("https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_REPO/main/background.png");
+    background-image: url("mitin.png");
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
