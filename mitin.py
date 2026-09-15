@@ -1,14 +1,4 @@
 import streamlit as st
-st.markdown("""
-<style>
-.stApp {
-    background-image: url("mitin.png");
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-}
-</style>
-""", unsafe_allow_html=True)
 
 st.title(' Welcome to :rainbow[MITin] ')
 st.write(':blue[Your talent finding platform]')
