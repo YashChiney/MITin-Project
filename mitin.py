@@ -1,4 +1,5 @@
 import streamlit as st
+st.background('mitin.png')
 st.title(' Welcome to :rainbow[MITin] ')
 st.write(':blue[Your talent finding platform]')
 st.write('# Choose your type of access')
@@ -24,3 +25,4 @@ st.markdown(
 Recruiters can use multiple filters such as branch, CGPA, skills, programming languages, project type, and project level to quickly find students matching their requirements. Students can build and maintain their profiles throughout college, creating a digital portfolio that represents their growth and capabilities.
 """
 )
+
