@@ -1,6 +1,6 @@
 import streamlit as st
 
-st.title(' Welcome to :rainbow[MITin] ')
+st.title(' Welcome to :blue[MITin] ')
 st.write(':blue[Your talent finding platform]')
 st.write('# Choose your type of access')
 col1, col2, col3, col4 = st.columns(4)
@@ -15,9 +15,9 @@ with col3:
 
 with col4:
   b4=st.button('Signup as :red[student]')
-st.title('What is :rainbow[MITin]?')
+st.title('What is :blue[MITin]?')
 st.write('MITin is an exclusive digital platform designed for MIT-WPU students and recruiters to connect through student projects, skills, achievements, and academic profiles. It provides students with a single place to showcase their projects, certifications, technical skills, CGPA, coding languages, and other achievements, while allowing recruiters to discover suitable candidates without having to manually search through multiple sources.') 
-st.title('Why use :rainbow[MITin]?')
+st.title('Why use :blue[MITin]?')
 st.markdown(
   """
   Student projects and achievements are often scattered across different platforms, making it difficult for recruiters to identify the right students. MITin solves this by bringing everything together in one college-specific platform.
