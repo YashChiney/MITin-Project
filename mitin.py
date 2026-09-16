@@ -2,7 +2,7 @@ import streamlit as st
 import streamlit as st
 
 st.markdown(
-    "<h1 style='text-align: center;'>:blue[MITin]</h1>",
+    "<h1 style='text-align: center;'>MITin</h1>",
     unsafe_allow_html=True
 )
 
