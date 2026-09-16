@@ -1,5 +1,4 @@
 import streamlit as st
-import streamlit as st
 
 st.markdown(
     "<h1 style='text-align: center;'>MITin</h1>",
