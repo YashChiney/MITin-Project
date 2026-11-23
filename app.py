@@ -149,10 +149,3 @@ else:
         st.caption("The red arrow marks the applied load W. The blue arrow marks reaction Rᶜ.")
 
 st.divider()
-st.subheader("What changes in the figure?")
-st.markdown("""
-- Changing **W** changes the applied-load arrow length and its label.
-- Changing **x** moves the applied load to a new position along the upper beam.
-- Changing **L, L₁, L₂ or a** updates the beam dimensions and contact-point position.
-- The calculated reaction value updates along with the diagram.
-""")
