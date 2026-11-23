@@ -105,7 +105,7 @@ def simple_diagram(L, W, x):
 
 def compound_diagram(L1, L2, a, W, x):
     """
-    Corrected Compound Beam geometry:
+    Compound Beam geometry:
     - Upper beam AB (span L1): Pin support at A (left), resting on lower beam CD at right end B.
     - Lower beam CD (span L2): Pin support at C (left) with reaction R_C, roller support at D (right).
     - Contact/transfer point is at distance 'a' from D (so distance L2 - a from C).
@@ -184,14 +184,14 @@ def render_comparison(analytical_val: float, experimental_val: float, label: str
     m1.metric(f"Analytical {label}", f"{analytical_val:.3f} N")
     m2.metric(f"Experimental {label}", f"{experimental_val:.3f} N")
 
-    if experimental_val == 0.0:
-        m3.metric("% Error (Analytical w.r.t. Experimental)", "Undefined (R_exp = 0)")
-        st.warning("Experimental reaction is 0.000 N, so % error cannot be calculated.")
+    if analytical_val == 0.0:
+        m3.metric("% Error (w.r.t. Analytical)", "Undefined (R_analytical = 0)")
+        st.warning("Analytical reaction is 0.000 N (e.g., when x = 0), so % error w.r.t. analytical cannot be calculated.")
     else:
-        pct_error = ((analytical_val - experimental_val) / experimental_val) * 100.0
-        m3.metric("% Error (Analytical w.r.t. Experimental)", f"{pct_error:+.2f}%")
+        pct_error = ((experimental_val - analytical_val) / analytical_val) * 100.0
+        m3.metric("% Error (w.r.t. Analytical)", f"{pct_error:+.2f}%")
         st.latex(
-            r"\%\text{ Error} = \frac{R_{\text{analytical}} - R_{\text{experimental}}}{R_{\text{experimental}}} \times 100"
+            r"\%\text{ Error} = \frac{R_{\text{experimental}} - R_{\text{analytical}}}{R_{\text{analytical}}} \times 100"
         )
 
 
@@ -234,6 +234,3 @@ else:
         st.latex(r"R_C = \frac{Wx(L_2-a)}{L_1L_2}")
         st.caption("Red: applied load W | Orange: transferred load F_B onto lower beam | Blue: reaction Rᶜ.")
         render_comparison(RC_analytical, R_exp, "Reaction Rᶜ")
-
-st.divider()
-
