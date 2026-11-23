@@ -188,10 +188,10 @@ def render_comparison(analytical_val: float, experimental_val: float, label: str
         m3.metric("% Error (w.r.t. Analytical)", "Undefined (R_analytical = 0)")
         st.warning("Analytical reaction is 0.000 N (e.g., when x = 0), so % error w.r.t. analytical cannot be calculated.")
     else:
-        pct_error = ((experimental_val - analytical_val) / analytical_val) * 100.0
-        m3.metric("% Error (w.r.t. Analytical)", f"{pct_error:+.2f}%")
+        pct_error = (abs(experimental_val - analytical_val) / analytical_val) * 100.0
+        m3.metric("% Error (w.r.t. Analytical)", f"{pct_error:.2f}%")
         st.latex(
-            r"\%\text{ Error} = \frac{R_{\text{experimental}} - R_{\text{analytical}}}{R_{\text{analytical}}} \times 100"
+            r"\%\text{ Error} = \frac{|R_{\text{experimental}} - R_{\text{analytical}}|}{R_{\text{analytical}}} \times 100"
         )
 
 
