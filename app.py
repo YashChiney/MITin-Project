@@ -5,11 +5,6 @@ from matplotlib.patches import Polygon, Circle
 st.set_page_config(page_title="Beam Experiment Visualizer", page_icon="⚖️", layout="wide")
 
 st.title("Beam Experiment – Live Diagram")
-st.write(
-    "Change the load, its position, beam dimensions, or experimental reaction. "
-    "The beam sketch, force arrows, reaction values, and % error update immediately. "
-    "This version uses diagrams only — no graphs."
-)
 
 mode = st.radio("Choose experiment", ["Simple Beam", "Compound Beam"], horizontal=True)
 
